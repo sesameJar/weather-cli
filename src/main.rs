@@ -1,4 +1,5 @@
 use clap::Parser;
+use reqwest;
 
 const LAT: f32 = -41.2;
 const LON: f32 = 174.7;
@@ -13,6 +14,6 @@ struct Args {
 }
 fn main() {
     let args = Args::parse();
-
-    println!("{}", args.days);
+    let body = reqwest::blocking::get("https://www.rust-lang.org")?.text()?;
+    println!("body = {}", body);
 }
