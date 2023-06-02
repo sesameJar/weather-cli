@@ -1167,6 +1167,7 @@ dependencies = [
  "clap 4.3.0",
  "dotenv",
  "reqwest",
+ "serde_json",
 ]
 
 [[package]]
